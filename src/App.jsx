@@ -5,6 +5,7 @@ import Home from "./routes/Home";
 import About from "./routes/About";
 import Rental from "./routes/Rental";
 import NotFound from "./routes/NotFound";
+import "./styles/style.scss";
 
 export default function App() {
   return (

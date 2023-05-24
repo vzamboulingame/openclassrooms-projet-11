@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header>
+    <header className="header">
       <h1>KASA</h1>
       <nav>
         <ul>
