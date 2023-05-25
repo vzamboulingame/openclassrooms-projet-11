@@ -8,4 +8,31 @@
     background-color: $color-tertiary;
     color: $color-secondary;
     padding: 2em 0;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2em;
+    }
+
+    &-logo {
+        width: 12rem;
+        margin-top: 1em;
+
+        @include for-mobile {
+            width: 10rem;
+        }
+    }
+
+    &-text {
+        font-weight: 500;
+        font-size: 2.4rem;
+
+        @include for-mobile {
+            font-size: 1.4rem;
+            margin-bottom: 1em;
+        }
+    }
 }

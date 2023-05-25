@@ -22,44 +22,31 @@
         column-gap: 3em;
         list-style: none;
 
+        @include for-mobile {
+            column-gap: 1em;
+        }
+
         &-item {
             text-decoration: none;
             font-weight: 500;
             font-size: 2.4rem;
             color: $color-primary;
 
-            &.active {
-                text-decoration: underline;
-            }
-
-            @include for-tablet {
-                font-size: 2.2rem;
-            }
-
             @include for-mobile {
                 font-size: 2rem;
             }
-        }
 
-        @include for-tablet {
-            column-gap: 2em;
-        }
-
-        @include for-mobile {
-            column-gap: 1em;
+            &.active {
+                text-decoration: underline;
+            }
         }
     }
 
     &-logo {
         width: 22rem;
-        fill: $color-primary;
-
-        @include for-tablet {
-            width: 18rem;
-        }
 
         @include for-mobile {
-            width: 14rem;
+            width: 16rem;
         }
     }
 }

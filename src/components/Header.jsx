@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import logo from "../images/logo.svg";
+import logo from "../images/logo-red.svg";
 
 export default function Header() {
   const location = useLocation();
@@ -19,7 +19,7 @@ export default function Header() {
                 }`}
                 to="/"
               >
-                Home
+                Accueil
               </Link>
             </li>
             <li>
@@ -29,7 +29,7 @@ export default function Header() {
                 }`}
                 to="/about"
               >
-                About
+                A Propos
               </Link>
             </li>
           </ul>
