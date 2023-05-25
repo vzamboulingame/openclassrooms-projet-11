@@ -6,6 +6,12 @@
 
 .header {
     padding: 2em 0;
+    color: $color-primary;
+    height: 15rem;
+
+    @include for-mobile {
+        height: 10rem;
+    }
 
     &-container {
         display: flex;
@@ -30,14 +36,17 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 2.4rem;
-            color: $color-primary;
 
             @include for-mobile {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
 
             &.active {
                 text-decoration: underline;
+            }
+
+            &:visited {
+                color: $color-primary;
             }
         }
     }
@@ -46,7 +55,7 @@
         width: 22rem;
 
         @include for-mobile {
-            width: 16rem;
+            width: 11rem;
         }
     }
 }

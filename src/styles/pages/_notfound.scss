@@ -1,0 +1,50 @@
+/*****************************************
+* ERROR PAGE SPECIFIC STYLES
+*****************************************/
+
+@use "../utils/" as *;
+
+.notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $color-primary;
+
+    &-code {
+        font-weight: 700;
+        font-size: 28.8rem;
+
+        @include for-mobile {
+            font-size: 14.4rem;
+        }
+    }
+
+    &-text {
+        font-weight: 500;
+        font-size: 3.6rem;
+        margin-top: 2em;
+        margin-bottom: 4em;
+
+        @include for-mobile {
+            font-size: 1.8rem;
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+    }
+
+    &-link {
+        text-decoration: underline;
+        font-weight: 500;
+        font-size: 1.8rem;
+
+        @include for-mobile {
+            font-size: 1rem;
+        }
+
+        &:visited {
+            color: $color-primary;
+        }
+    }
+}

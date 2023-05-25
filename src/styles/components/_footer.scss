@@ -5,9 +5,14 @@
 @use "../utils/" as *;
 
 .footer {
+    padding: 2em 0;
     background-color: $color-tertiary;
     color: $color-secondary;
-    padding: 2em 0;
+    height: 20rem;
+
+    @include for-mobile {
+        height: 15rem;
+    }
 
     &-container {
         display: flex;
