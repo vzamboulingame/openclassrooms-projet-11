@@ -5,7 +5,7 @@
 @use "../utils/" as *;
 
 .footer {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 2em;
+    background-color: $color-tertiary;
+    color: $color-secondary;
+    padding: 2em 0;
 }

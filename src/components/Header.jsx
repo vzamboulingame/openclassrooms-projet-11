@@ -7,7 +7,9 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-container">
-        <img src={logo} className="header-logo" alt="Logo Kasa" />
+        <Link to="/">
+          <img className="header-logo" src={logo} alt="Logo Kasa" />
+        </Link>
         <nav>
           <ul className="header-links">
             <li>
