@@ -1,0 +1,36 @@
+/*****************************************
+* HEADER COMPONENT STYLES
+*****************************************/
+
+@use "../utils/" as *;
+
+.header {
+    padding: 2em 0;
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 3em;
+        list-style: none;
+
+        &-item {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 24px;
+            color: #ff6060;
+
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}

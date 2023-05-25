@@ -1,13 +1,20 @@
-.header {
-    color: orangered;
-    margin: 2em 0;
+/*****************************************
+* GLOBAL SCOPE STYLES
+*****************************************/
+
+@use "../utils/" as *;
+
+body {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
 }
 
 .main {
     margin: 2em 0;
 }
 
-.footer {
-    color: darkslategray;
-    margin: 2em 0;
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
