@@ -5,6 +5,7 @@ import Home from "./routes/Home";
 import About from "./routes/About";
 import Rental from "./routes/Rental";
 import NotFound from "./routes/NotFound";
+import { logements } from "./data/logements";
 import "./styles/style.scss";
 
 export default function App() {
@@ -12,9 +13,9 @@ export default function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home data={logements} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/rental/:rentalId" element={<Rental />} />
+        <Route path="/rental/:rentalId" element={<Rental data={logements} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
