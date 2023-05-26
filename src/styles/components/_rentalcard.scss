@@ -1,0 +1,36 @@
+/*****************************************
+* RENTAL CARD COMPONENT STYLES
+*****************************************/
+
+@use "../utils/" as *;
+
+.rental {
+    &-link {
+        width: 100%;
+        text-decoration: none;
+    }
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        text-align: left;
+        white-space: break-spaces;
+        @extend %white-text-shadow;
+        width: 34rem;
+        height: 34rem;
+        padding: 1em;
+        background: linear-gradient($color-primary, $color-tertiary);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $color-secondary;
+        border-radius: 1rem;
+
+        @include for-mobile {
+            width: 100%;
+            height: 26rem;
+        }
+    }
+}

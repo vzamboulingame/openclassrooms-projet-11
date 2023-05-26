@@ -17,10 +17,10 @@ body {
 }
 
 .main {
-    height: calc(100% - 20rem - 15rem);
+    min-height: calc(100% - 20rem - 15rem);
 
     @include for-mobile {
-        height: calc(100% - 15rem - 10rem);
+        min-height: calc(100% - 15rem - 10rem);
     }
 }
 
