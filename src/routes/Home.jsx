@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { RentalsContext } from "../App";
+import Banner from "../components/Banner";
 import RentalCard from "../components/RentalCard";
+import bannerImg from "../images/home-banner.jpg";
 
 export default function Home() {
   const rentals = useContext(RentalsContext);
@@ -15,9 +17,7 @@ export default function Home() {
 
   return (
     <main className="container main home">
-      <div className="home-banner">
-        <p className="home-banner-text">Chez vous, partout et ailleurs</p>
-      </div>
+      <Banner bgImg={bannerImg} slogan="Chez vous, partout et ailleurs" />
       <section className="home-rentals">{rentalCards}</section>
     </main>
   );
