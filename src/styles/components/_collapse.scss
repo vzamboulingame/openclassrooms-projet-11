@@ -1,0 +1,49 @@
+/*****************************************
+* COLLAPSE COMPONENT STYLES
+*****************************************/
+
+@use "../utils/" as *;
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 2em;
+    list-style: none;
+
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 142.6%;
+        background-color: $color-primary;
+        color: $color-secondary;
+        padding: 0.25em 1em;
+        border-radius: 0.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &-text {
+        width: 100%;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 142.6%;
+        color: $color-primary;
+        background-color: #f7f7f7;
+        padding: 1em;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .collapse-arrow {
+        margin-left: 1em;
+    }
+}
