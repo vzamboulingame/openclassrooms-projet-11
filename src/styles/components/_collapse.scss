@@ -14,6 +14,10 @@
     margin-bottom: 2em;
     list-style: none;
 
+    @include for-mobile {
+        margin-bottom: 1em;
+    }
+
     &-title {
         display: flex;
         align-items: center;
@@ -26,6 +30,10 @@
         color: $color-secondary;
         padding: 0.25em 1em;
         border-radius: 0.5rem;
+
+        @include for-mobile {
+            font-size: 1.8rem;
+        }
 
         &:hover {
             cursor: pointer;
@@ -41,9 +49,19 @@
         background-color: #f7f7f7;
         padding: 1em;
         border-radius: 0 0 0.5rem 0.5rem;
+
+        @include for-mobile {
+            font-size: 1.6rem;
+        }
     }
 
-    .collapse-arrow {
-        margin-left: 1em;
+    &-arrow {
+        width: 2.4rem;
+        margin-right: 1em;
+
+        @include for-mobile {
+            width: 1.6rem;
+            margin-right: 0;
+        }
     }
 }
