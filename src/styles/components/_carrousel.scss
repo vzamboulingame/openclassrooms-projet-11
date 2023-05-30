@@ -1,0 +1,74 @@
+/*****************************************
+* CARROUSEL COMPONENT STYLES
+*****************************************/
+
+@use "../utils/" as *;
+
+.carrousel {
+    display: grid;
+    grid-template-columns: 4% 92% 4%;
+    width: 100%;
+    height: 42rem;
+    background: linear-gradient($color-primary, $color-tertiary);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2.5rem;
+
+    @include for-mobile {
+        grid-template-columns: 6% 88% 6%;
+        height: 26rem;
+        border-radius: 1rem;
+    }
+
+    &-grid1,
+    &-grid3 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    &-grid1 {
+        grid-column: 1;
+        align-items: flex-end;
+    }
+
+    &-grid2 {
+        grid-column: 2;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: end;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+    }
+
+    &-grid3 {
+        grid-column: 3;
+        align-items: flex-start;
+    }
+
+    &-previous,
+    &-next {
+        width: 4.668rem;
+        height: 7.92rem;
+        border: none;
+        background-color: transparent;
+        color: $color-secondary;
+        @extend %white-text-shadow;
+        cursor: pointer;
+
+        @include for-mobile {
+            width: 1.167rem;
+            height: 1.98rem;
+        }
+    }
+
+    &-number {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 142.6%;
+        color: $color-secondary;
+        @extend %white-text-shadow;
+    }
+}

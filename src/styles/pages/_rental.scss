@@ -1,0 +1,26 @@
+/*****************************************
+* RENTAL PAGE SPECIFIC STYLES
+*****************************************/
+
+@use "../utils/" as *;
+
+.rental {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &-collapses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 2em 0;
+        padding: 0 2em;
+
+        @include for-mobile {
+            padding: 0;
+        }
+    }
+}
