@@ -17,12 +17,13 @@
         align-items: flex-start;
         text-align: center;
         width: 100%;
-        margin: 2em 0;
+        margin: 0.5em 0;
 
         @include for-mobile {
             flex-direction: column;
-            justify-content: start;
+            justify-content: space-between;
             align-items: center;
+            row-gap: 2em;
         }
 
         &-item {
@@ -31,6 +32,155 @@
 
             @include for-mobile {
                 width: 100%;
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 2em 0;
+        color: $color-primary;
+
+        @include for-mobile {
+            flex-direction: column;
+            row-gap: 1em;
+            margin: 1em 0;
+        }
+
+        &-grid1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            row-gap: 0.5em;
+        }
+
+        &-grid2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: end;
+
+            @include for-mobile {
+                flex-direction: row-reverse;
+                align-items: center;
+                margin-top: 0.5em;
+            }
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 3.6rem;
+            line-height: 142.6%;
+            text-align: left;
+
+            @include for-mobile {
+                font-size: 1.8rem;
+            }
+        }
+
+        &-location {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 142.6%;
+
+            @include for-mobile {
+                font-size: 1.4rem;
+            }
+        }
+
+        &-tags {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            column-gap: 1em;
+            row-gap: 1em;
+            margin-top: 1.5em;
+
+            @include for-mobile {
+                column-gap: 0.5em;
+                row-gap: 0.5em;
+                margin-top: 0.5em;
+            }
+
+            &-item {
+                display: flex;
+                background-color: $color-primary;
+                color: $color-secondary;
+                border-radius: 1rem;
+                padding: 0.25em 1.5em;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 142.6%;
+                text-align: center;
+                vertical-align: middle;
+
+                @include for-mobile {
+                    border-radius: 0.5rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        &-host {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 1em;
+
+            &-name {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                text-align: right;
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 142.6%;
+
+                @include for-mobile {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &-picture {
+                width: 6.4rem;
+                height: 6.4rem;
+                border-radius: 50%;
+                border: none;
+                background-color: #c4c4c4;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                @include for-mobile {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                }
+            }
+        }
+
+        &-rating {
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            column-gap: 1em;
+
+            @include for-mobile {
+                align-items: start;
+                column-gap: 0.5em;
+            }
+
+            &-star {
+                height: 2.4rem;
+
+                @include for-mobile {
+                    height: 1.3rem;
+                }
             }
         }
     }
