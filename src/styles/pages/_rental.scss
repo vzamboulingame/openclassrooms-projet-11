@@ -54,7 +54,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: start;
+            align-items: flex-start;
             row-gap: 0.5em;
         }
 
@@ -62,7 +62,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: end;
+            align-items: flex-end;
 
             @include for-mobile {
                 flex-direction: row-reverse;
@@ -136,7 +136,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: end;
+                align-items: flex-end;
                 text-align: right;
                 font-weight: 500;
                 font-size: 1.8rem;
@@ -167,7 +167,7 @@
         &-rating {
             display: flex;
             flex-direction: row;
-            align-items: end;
+            align-items: flex-end;
             column-gap: 1em;
 
             @include for-mobile {
