@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 
+/**
+ * NotFound component.
+ *
+ * @param {void}
+ * @returns {JSX.Element} - Rendered component.
+ */
 export default function NotFound() {
   return (
     <main className="container main notfound">

@@ -1,5 +1,11 @@
 import logo from "../images/logo-white.svg";
 
+/**
+ * Footer component.
+ *
+ * @param {void}
+ * @returns {JSX.Element} - Rendered component.
+ */
 export default function Footer() {
   return (
     <footer className="footer">

@@ -30,6 +30,12 @@ function RentalRouting() {
   }
 }
 
+/**
+ * Main App component.
+ *
+ * @param {void}
+ * @returns {JSX.Element} Rendered component.
+ */
 export default function App() {
   return (
     <RentalsContext.Provider value={logements}>

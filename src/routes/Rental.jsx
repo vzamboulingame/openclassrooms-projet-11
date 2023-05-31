@@ -6,6 +6,12 @@ import Collapse from "../components/Collapse";
 import starRed from "../images/star-red.svg";
 import starGray from "../images/star-gray.svg";
 
+/**
+ * Rental component.
+ *
+ * @param {void}
+ * @returns {JSX.Element} - Rendered component.
+ */
 export default function Rental() {
   const rentals = useContext(RentalsContext);
   const { rentalId } = useParams();
@@ -14,6 +20,8 @@ export default function Rental() {
   const rentalLocation = rentalObj.location;
   const rentalDescription = rentalObj.description;
   const rentalHostPicture = rentalObj.host.picture;
+
+  // Generate the rental rating stars based on the rating value
   const rentalRating = Array.from(Array(5), (value, index) => {
     const isFilled = index < rentalObj.rating;
     const starImg = isFilled ? starRed : starGray;
@@ -28,14 +36,19 @@ export default function Rental() {
     );
   });
 
+  // Split the host name into individual names and create a div for each name
   const rentalHostName = rentalObj.host.name
     .split(" ")
     .map((name, index) => <div key={index}>{name}</div>);
+
+  // Create a span element for each rental tag
   const rentalTags = rentalObj.tags.map((tag) => (
     <span key={tag} className="rental-info-tags-item">
       {tag}
     </span>
   ));
+
+  // Create a div element for each rental equipment
   const rentalEquipments = rentalObj.equipments.map((equipment) => (
     <div key={equipment}>{equipment}</div>
   ));

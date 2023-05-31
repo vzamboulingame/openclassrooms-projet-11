@@ -2,6 +2,13 @@ import { useState } from "react";
 import arrowLeft from "../images/arrow-left.svg";
 import arrowRight from "../images/arrow-right.svg";
 
+/**
+ * Carrousel component.
+ *
+ * @param {object} props - Component props.
+ * @param {object} props.data - Rental data object.
+ * @returns {JSX.Element} - Rendered component.
+ */
 export default function Carrousel(props) {
   const rentalObj = props.data;
   const rentalPicturesArray = rentalObj.pictures;
@@ -12,12 +19,14 @@ export default function Carrousel(props) {
   }`;
   const showButtons = rentalPicturesArray.length > 1;
 
+  // Event handler for the previous button click
   const handlePreviousClick = () => {
     setCurrentPictureIndex((prevIndex) =>
       prevIndex === 0 ? rentalPicturesArray.length - 1 : prevIndex - 1
     );
   };
 
+  // Event handler for the next button click
   const handleNextClick = () => {
     setCurrentPictureIndex((prevIndex) =>
       prevIndex === rentalPicturesArray.length - 1 ? 0 : prevIndex + 1

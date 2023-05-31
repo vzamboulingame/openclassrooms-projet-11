@@ -1,6 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import logo from "../images/logo-red.svg";
 
+/**
+ * Header component.
+ *
+ * @param {void}
+ * @returns {JSX.Element} - Rendered component.
+ */
 export default function Header() {
   const location = useLocation();
 

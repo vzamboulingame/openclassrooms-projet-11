@@ -2,6 +2,12 @@ import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import bannerImg from "../images/about-banner.jpg";
 
+/**
+ * About component.
+ *
+ * @param {void}
+ * @returns {JSX.Element} - Rendered component.
+ */
 export default function About() {
   return (
     <main className="container main about">
